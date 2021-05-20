@@ -6,26 +6,20 @@ public class Main{
 		List<Long> listTax1 = new ArrayList<>();
 		List<Long> listTax2 = new ArrayList<>();
 		List<Long> listTax3 = new ArrayList<>();
-		listTax1.add(50L);
-		listTax1.add(50L);
-		listTax2.add(100L);
-		listTax2.add(50L);
-		listTax2.add(50L);
-		listTax3.add(50L);
-		listTax3.add(50L);
-		listTax3.add(50L);
-		listTax3.add(50L);
-		listTax3.add(50L);
-		listTax3.add(50L);
 
+		listTax1.add(100L);
+
+		listTax2.add(100L);
+		listTax2.add(100L);
+
+		listTax3.add(100L);
+		listTax3.add(100L);
+		listTax3.add(100L);
 
 		Tax tax = new Tax();
 
-
-		Thread magazine1 = new Thread(null, ()-> { tax.calcTax(listTax2); }, "Магазин 1");
-
+		Thread magazine1 = new Thread(null, ()-> { tax.calcTax(listTax1); }, "Магазин 1");
 		Thread magazine2 = new Thread(null, ()-> { tax.calcTax(listTax2); }, "Магазин 2");
-
 		Thread magazine3 = new Thread(null, ()-> { tax.calcTax(listTax3); }, "Магазин 3");
 
 		magazine1.start();

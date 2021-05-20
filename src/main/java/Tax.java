@@ -5,17 +5,14 @@ public class Tax {
 	LongAdder income = new LongAdder();
 
 	public long getCurrent() {
-		return income.longValue();
+		return income.sum();
 	}
 
 	public void calcTax(List<Long> listTax) {
-		long fullTax = 0;
 		if(listTax !=null && listTax.size()>0){
 			for(Long tax : listTax){
-				fullTax = fullTax + tax;
+				income.add(tax);
 			}
 		}
-		income.add(fullTax);
-		System.out.printf("\n" + Thread.currentThread().getName() + " добавил данные в отчетность. Общая сумма внесения: " + fullTax);
 	}
 }
