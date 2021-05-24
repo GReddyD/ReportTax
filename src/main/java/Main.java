@@ -9,12 +9,12 @@ public class Main{
 
 		listTax1.add(100L);
 
-		listTax2.add(100L);
+		listTax2.add(50L);
 		listTax2.add(100L);
 
+		listTax3.add(50L);
 		listTax3.add(100L);
-		listTax3.add(100L);
-		listTax3.add(100L);
+		listTax3.add(150L);
 
 		Tax tax = new Tax();
 
